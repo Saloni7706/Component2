@@ -1,0 +1,80 @@
+.datatable {
+  width: 100%;
+  border: 1px solid #27314b;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0f1530;
+  color: #e7ecf4;
+  --dt-cols: auto;
+}
+
+.datatable__header,
+.datatable__row {
+  display: grid;
+  grid-template-columns: var(--dt-cols);
+  align-items: center;
+}
+
+.datatable__header {
+  position: sticky;
+  top: 0;
+  background: #11193a;
+  border-bottom: 1px solid #27314b;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.datatable__cell {
+  padding: 12px;
+  min-width: 120px;
+  border-bottom: 1px solid #17224a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.datatable__cell--checkbox {
+  width: 48px;
+  min-width: 48px;
+}
+
+.datatable__row {
+  cursor: pointer;
+}
+
+.datatable__row:hover {
+  background: rgba(76, 201, 240, 0.08);
+}
+
+.datatable__row--selected {
+  background: rgba(76, 201, 240, 0.16);
+}
+
+.datatable__sort {
+  user-select: none;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.datatable__sort-btn {
+  background: transparent;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.datatable__status {
+  padding: 24px;
+  text-align: center;
+  color: #93a0b4;
+}
+
+@media (max-width: 640px) {
+  .datatable__cell {
+    padding: 10px 8px;
+    min-width: 100px;
+  }
+}

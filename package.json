@@ -1,0 +1,27 @@
+{
+  "name": "datatable-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^5.0.1",
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.4"
+  },
+  "vitest": {
+    "setupFiles": "./src/setupTests.ts"
+  }
+}
