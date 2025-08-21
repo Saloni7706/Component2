@@ -20,7 +20,7 @@ function DataTable<T>({
   columns,
   loading = false,
   selectable = false,
-  onRowSelect
+  onRowSelect,
 }: DataTableProps<T>) {
   const [sortKey, setSortKey] = useState<string | null>(null);
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
@@ -77,7 +77,8 @@ function DataTable<T>({
               role={col.sortable ? "button" : undefined}
               aria-sort={sortKey === col.key ? sortOrder : "none"}
             >
-              {col.title} {sortKey === col.key ? (sortOrder === "asc" ? "▲" : "▼") : ""}
+              {col.title}{" "}
+              {sortKey === col.key ? (sortOrder === "asc" ? "▲" : "▼") : ""}
             </th>
           ))}
         </tr>
@@ -104,4 +105,6 @@ function DataTable<T>({
   );
 }
 
+// ✅ Export both default and named
 export default DataTable;
+export { DataTable };
